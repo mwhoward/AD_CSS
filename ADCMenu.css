@@ -1,0 +1,729 @@
+﻿
+/* BASE STYLES */
+body, html {
+    height: 100%;
+    padding:0;
+    margin:0;
+    font-size:100%;
+    line-height: 1.333em;
+    text-shadow:none !important;
+}
+
+a, a:active, a:visited, a:link {
+    text-decoration:none;
+    color: #095E5B;
+}
+
+a:hover, a:focus {
+    color: #00C7B1;
+    text-decoration: none;
+}
+
+table {
+    padding: 0em;
+    margin: 0em;
+    border-collapse: collapse;
+    border-spacing: 0em;
+}
+
+p {
+    margin:1em 0em !important;
+}
+
+.shadow {
+	-webkit-box-shadow: 0 0 0.313em #888;
+	-moz-box-shadow: 0 0 0.313em #888;
+	-ms-box-shadow: 0 0 0.313em #888;
+	-o-box-shadow: 0 0 0.313em #888;
+	box-shadow: 0 0 0.313em #888;
+    behavior: url('pie.htc');
+}
+
+/* BACKGROUND */ 
+.body_bg_img_container {
+    background: url("imgs/background.png");
+    background-position-x: center;
+    background-repeat: repeat-y;
+    margin: 0;
+    padding: 0;
+}
+
+.bg_lines_container {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    /*margin-left: -640px;
+    width: 1280px;
+    height: 768px;*/
+    margin-left: -40em;
+    width: 80em;
+    height: 48em;
+    background: url("../includes/aws/Wave.png");
+}
+
+.bg_img_container {
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /*height: 768px;*/
+    height: 48em; 
+    background: url("../includes/aws/Botm.png");
+    background-repeat: repeat-x;
+}
+
+.main_container {
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    min-width:60em;
+}
+
+/* SITE HEAD */
+
+#SiteHead {
+    padding: 0em;
+    margin: 0em;
+    position:relative;
+    /*width:100%;*/
+    /*height:121px;*/
+    min-width:60em;
+    height:7.35em;
+    background:#000;
+}
+
+.SiteHeadTop {
+    padding:0;
+    margin:0;
+    /*height:80px;*/
+    height:5em;
+    background:#1c1d1c;
+    /*width:100%;*/
+    min-width:60em;
+    border-bottom:1px white solid;
+    position:relative;
+    overflow:hidden;
+}
+
+.SiteHeadNAV {
+    /*height:40px;*/
+    height: 2em;
+    background: #000;
+    /*width:100%;*/
+    min-width: 60em;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0em 0em 0em 1.8em;
+}
+
+li.HeadNavItems{
+    font-family:Abel, Arial;
+    font-size: 1.063em;
+    text-transform:uppercase;
+}
+
+/* LOGO PLACEMENT */
+.AdventWordmark {
+    margin:2.5em 0em 0em 3.75em;
+    float:left;
+    display:inline-block;
+}
+
+/* Drop Down Menus */
+.SiteHeadDDMenu {
+    display: inline-block;
+    float: right;
+    margin: 3em 3.75em 0em 0em;
+    font-family:Abel, Arial;
+    font-size: .875em;
+    color:#FFF;
+    text-transform:uppercase;
+}
+
+.SiteHeadDDMenu a {
+    color: #FFF;
+}
+
+.DDVertDivide {
+    float: none;
+    padding: 0.35em 0em;
+}
+
+/* OVERRIDE BOOTSTRAP CLASSES */
+.container {
+    width: 94em;
+}
+
+.navbar {
+    min-height: 2em;
+}
+
+.navbar-nav > li > a {
+    line-height: 100%;
+}
+
+#SiteHead .navbar-inner {
+    padding-right: 0;
+    background: none !important;
+    border-radius: 0;
+    box-shadow: none;
+    border:0;
+}
+
+.SiteHeadNAV .navbar .nav > li a{
+    padding: 0.45em 1.875em;
+}
+
+.SiteHeadNAV li.dropdown-submenu a{
+    padding: 0 !important;
+}
+
+.SiteHeadTop .navbar .nav > li a {
+    padding: 0.65em;
+}
+
+a:focus {
+    border: 0;
+    outline:none;
+}
+
+.navbar .nav > li > a{
+    color: #FFF;
+}
+
+.SiteHeadTop .navbar .nav > li > a:hover, .SiteHeadTop .navbar .nav > li > a:active, .SiteHeadTop .navbar .nav > li > a:focus  {
+    color: #FFF;
+}
+
+.SiteHeadNAV .navbar .nav > li > a:hover, .SiteHeadNAV .navbar .nav > li > a:active, .SiteHeadNAV .navbar .nav > li > a:focus, .SiteHeadNAV .navbar .nav li.dropdown.open > .dropdown-toggle {
+    background: #00C7B1;
+    color: #FFF;
+}
+
+.navbar {
+    border: 0;
+    border-radius: 0;
+}
+
+.navbar .nav {
+    margin: 0;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background: none;
+}
+
+.navbar .nav > li > a {
+    text-shadow: none !important;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    padding:0;
+}
+
+.popover {
+    border-radius: 0px !important;
+    padding:0px !important;
+}
+
+.popover-content {
+    font-size: .875em;
+    font-family: Abel;
+    color: #000;
+    padding:0.313em;
+}
+
+.popover-content td {
+    padding: 0.625em;
+    cursor:pointer;
+}
+
+.popover-content a {
+    color: #000;
+    height:100%;
+    width:100%;
+}
+
+.popover-content a:hover, .popover-content a:focus, .popover-content a:active, .popover-content td:hover, .popover-content td:active, .popover-content td:focus, .popover-content td:hover a {
+    color: #FFF;
+    background: #00C7B1;
+}
+
+.popover.bottom {
+    margin-top: .4em !important;
+}
+
+.popover .x {
+    display: none;
+}
+
+.SiteHeadNAV .caret {
+    display: none;
+}
+
+* {
+  -webkit-box-sizing: initial;
+     -moz-box-sizing: initial;
+          box-sizing: initial;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: initial;
+     -moz-box-sizing: initial;
+          box-sizing: initial;
+}
+
+li {
+    line-height: inherit;
+}
+
+.dropdown-menu {
+    margin: 0.01em 0em;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: inherit;
+    background-color: inherit;
+}
+
+.dropdown-menu > li > a {
+    color: inherit;
+    line-height: inherit;
+}
+
+.divider {
+    margin:1.250em 1.25em 1.25em 0em !important;
+    height:.01em !important;
+    border-bottom:1px solid #FFF !important;
+}
+
+.yamm .yamm-content {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.yamm-content{
+    position:relative;
+    display:table;
+    overflow:visible;
+}
+
+/* END OVERRIDE BOOTSTRAP CLASSES */
+
+
+
+/* NAVIGATION MENU */
+
+.MenuSubNavCategoryList {
+    color: #FFF;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    list-style-type: none;
+    padding: 1.250em 0em 1.25em 1.25em;
+    margin: 0;
+    background: #000;
+    font-family: 'A',Arial;
+    text-transform: none;
+    position: relative;
+    /*min-width: 14em;*/
+    width: 16em;
+    min-height:21.5em;
+}
+
+.MenuSubNavCategoryList li.SubNavCategory {
+    font-size: 1.188em !important;
+    line-height: 2.063em !important;
+    position:relative;
+}
+
+.MenuSubNavCategoryList li.SubNavLink {
+    font-size: 0.938em !important;
+    line-height: 2.063em !important;
+}
+
+.SubNavCatSpace {
+    margin-bottom: 1px;
+}
+
+.SubNavSelection {
+    top: 1em;
+    left: -11px;
+    margin-top: -11px;
+    border-left-width: 0px;
+    border-right-color: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 11px;
+}
+
+.MenuSubNavCategoryList .popover {
+    display: block !important;
+    margin-left: 0;
+    background: inherit;
+    border:0;
+}
+
+    .MenuSubNavCategoryList .popover.right .arrow {
+        margin-top: -11px;
+        border-left-width: 0px;
+        border-right-color: rgba(0, 0, 0, 0.25);
+        top: 48%;
+        left: 95.6%;
+        display:none;
+    }
+
+    .MenuSubNavCategoryList .popover.right:hover .arrow {
+        display: block;
+    }
+
+.MenuSubNavCategoryList .MenuSubNavCategorySel .arrow {
+    display: block !important;
+}
+
+/*.MenuSubNavLinkList {
+    font-size: 0.938em;
+    color: #FFF;
+    line-height: 2.063em;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}*/
+
+.MenuSubNavCategoryList li:hover, .MenuSubNavCategoryList li:focus, .MenuSubNavCategorySel, .MenuSubNavLinkList li:hover{
+    color: #00C7B1;
+}
+
+.spacer {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color:transparent;
+}
+
+
+
+/* PRODUCT MENU */
+.ProductSelectionList {
+    list-style-type: none;
+    font-family: 'A',Arial;
+    white-space: nowrap;
+    line-height: 2.063em !important;
+    color: #095E5B;
+    padding: 0em;
+    margin: 0em;
+    text-transform:none;
+}
+
+    .ProductSelectionList li a, .ProductSelectionStars li {
+        padding: 0 !important;
+        font-family: 'A',Arial;
+        font-size: 0.875em !important;
+        /*white-space: nowrap;
+        line-height: 2.063em !important;*/
+    }
+
+/*.ProductSelection {
+    font-size: 0.875em;
+    line-height: 2.063em;
+    vertical-align: middle;
+    padding-right: 0.833em;
+    cursor:pointer;
+}*/
+
+.ProductSubSelList {
+    margin-left: 1em;
+}
+
+.ProductSelectionStars {
+    /*font-size: 0.875em;*/
+    font-family:'A',Arial;
+    white-space:nowrap;
+    line-height: 2.063em !important;
+    color: #095E5B;
+    padding:0em;
+    margin:0em 0em 0em 2em;
+    list-style-image:url('star_unselected.png');
+}
+
+.ProductSelectionList li, .ProductSelectionStars li {
+    cursor: pointer;
+}
+
+.ProductSelectionStars li:hover {
+    list-style-image:url('star_selected.png');
+}
+
+.ProductSelectionList li a:hover {
+    color: #00C7B1;
+}
+
+.ProductList, .ProductStars, .ProductSelMenu {
+    display: inline-block;
+}
+
+.MyProductDefaultText {
+    font-family:Abel;
+    font-size: 0.875em;
+    line-height:1.333em;
+    color:#FFF;
+}
+
+.MyProductsLabel {
+    font-family: Abel;
+    font-size: 0.875em;
+    line-height:1.167em;
+    color:#FFF;
+    text-transform:uppercase;
+    white-space:nowrap;
+}
+
+.ProdSubMessageBox {
+    position: absolute;
+    z-index: 2000;
+    top: 5.6em;
+    left: 17.8em;
+    display: inline !important;
+}
+
+    .ProdSubMessageBox .arrow {
+        left: 1.25em !important;
+    }
+
+.CloseX {
+    float:right;
+    margin:0.4em;
+    cursor:pointer;
+    height:16px;
+    width:16px;
+    background:url('closeX.png') no-repeat;
+}
+
+    .CloseX:hover {
+        background: url('closeX_hover.png') no-repeat;
+    }
+
+.SubNavAbelText {
+    font-family: Abel;
+    font-size: 0.875em;
+    line-height: 1.167em;
+    color: #FFF;
+    text-wrap:normal;
+}
+
+.MenuSubNavCategoryList li.MyProductsLabel:hover, .MenuSubNavCategoryList li.SubNavAbelText {
+    color: #FFF !important;
+}
+
+
+/* MENU PANELS */
+
+.MenuPanel {
+    color: #000;
+    background: #FFF;
+    /*min-width:14em !important;
+    max-width:16em;
+    width:auto;*/
+    width:16em;
+    vertical-align:top;
+    display:inline-block;
+    height:100%;
+    min-height:18em;
+    margin:0;
+    padding:0;
+    overflow-wrap:normal;
+}
+
+.MenuPanelMid {
+    border-right: 1px solid #75787B;
+    margin-right: 0 !important;
+}
+
+    .MenuPanelMid .MenuPanelPadding {
+        margin-right: 0.833em;
+    }
+
+.MenuPanel>li {
+    width: auto;
+    height: 21.5em;
+    /*min-height: 90%;
+    height: auto;*/
+    margin: 1.667em 0.833em 0em 0.833em;
+    padding: 0em;
+    font-family: Arial;
+    /*font-size: 0.750em;
+    line-height: 1.125em;*/
+    color: #75787B;
+    text-transform:none;
+}
+
+.MenuPanelList {
+    list-style-type:none;
+    font-size: 0.875em;
+    line-height: 2.063em;
+    color: #095E5B;
+    padding:0em;
+    margin:0em;
+}
+
+.MenuHead1 {
+    font-size:1em;
+    margin-bottom: 0.6em;
+    color:#000;
+    font-family:'A',Arial;
+    text-transform:none;
+}
+
+.PanelSubHead {
+    font-family: Abel;
+    font-size: 0.875em;
+    line-height: 1.167em;
+    color: #000;
+    text-wrap:normal;
+    text-transform:uppercase;
+    margin-bottom: 0.8em;
+}
+
+.PanelLink {
+    font-family:'A',Arial;
+    font-size: 0.875em;
+    vertical-align: middle;
+    /*white-space:nowrap;*/
+    cursor:pointer;
+    line-height: 1.125em;
+    color: #095E5B;
+    margin:0;
+    padding:0;
+}
+
+.PanelNumber {
+    font-family:'A',Arial;
+    font-size: 0.875em;
+    vertical-align: middle;
+    white-space:nowrap;
+    cursor:pointer;
+    line-height: 2.063em;
+    margin:0;
+    padding:0;
+}
+
+.PanelHidden {
+    display: none;
+}
+
+.PanelMarginTop {
+    margin-top: 1.5em;
+}
+
+.PanelMarginTopSmall {
+    margin-top: .8em;
+}
+
+.PanelLink a, .PanelLink a:active, .PanelLink a:visited, .PanelLink a:link {
+    color: #095E5B;
+    text-decoration:none;
+    margin:0 !important;
+    padding:0 !important;
+}
+
+.PanelLink:hover, .PanelLink:focus, .PanelLink a:hover {
+    color: #00C7B1;
+    text-decoration:none;
+}
+
+.PanelLinkIndent {
+    padding-left: 0.833em;
+    line-height: 1.667em !important;
+}
+
+.PanelText {
+    font-size:0.750em;
+    line-height:1.125em;
+    color:#75787B;
+    margin-bottom:1em;
+}
+
+.PanelButton {
+    text-align: right;
+    margin-top:2em;
+}
+
+
+/* BUTTON STYLES */
+
+.ButtonBase {
+    padding:0.625em 1em;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius:4px;
+    font-family:'A', Arial;
+    font-size: 0.875em;
+    cursor:pointer;
+}
+
+.ButtonPrimary {
+    border: 1px solid #3fb0a1;
+    background: #00C7B1;
+    color: #FFF;
+}
+
+    .ButtonPrimary:hover {
+        background: #0D8783;
+        border-color: #0b7470;
+    }
+
+.ButtonSecondaryLight {
+    border: 1px solid #D5D5D5;
+    background: #FFF;
+    color: #000;
+}
+
+    .ButtonSecondaryLight:hover {
+        background: #F6FFFE;
+    }
+
+.ButtonSecondaryDark {
+    border: 1px solid #75787b;
+    background: #75787b;
+    color: #000;
+}
+
+    .ButtonSecondaryDark:hover {
+        background: #F6FFFE;
+    }
+
+.ButtonTextLight {
+    color: #929295;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: 'A' Arial;
+    font-size: 0.875em;
+}
+
+    .ButtonTextLight:hover {
+        color: #0d8783;
+    }
+
+.ButtonTextDark {
+    color: #BBBCBC;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: 'A' Arial;
+    font-size: 0.875em;
+}
+
+    .ButtonTextDark:hover {
+        color: #0d8783;
+    }
